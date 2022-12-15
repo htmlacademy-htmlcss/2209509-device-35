@@ -273,6 +273,7 @@ li .navigation-item {
   width: auto;
   color: #000000;
   font: inherit;
+  cursor: pointer;
 }
 
 .search-button:hover {
@@ -375,10 +376,45 @@ li .navigation-item {
 }
 
 @supports not selector(:focus-visible) {
-  .navigation-link::focus {
+  .navigation-link:focus {
     outline: 2px solid #AF4FFF;
     outline-offset: 0;
   }
+}
+
+
+.navigation-link-subcatalog {
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  position: relative;
+}
+
+.navigation-link-icon {
+  position: relative;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: #FFE17F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-link-icon::before,
+.navigation-link-icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-link-icon::before {
+  content: "";
+  transform: rotate(90deg);
 }
 
 /* --- слайды ---*/
@@ -594,6 +630,7 @@ li .navigation-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 
@@ -612,7 +649,6 @@ li .navigation-item {
   display: block;
   width: fit-content;
   margin: 0 auto;
-  min-height: 20px;
   padding: 10px 5px;
   background-color: transparent;
 }
@@ -643,6 +679,7 @@ li .navigation-item {
   left: 0;
   background-color: #FFE17F;
   z-index: -1;
+  cursor: pointer;
 }
 
 .detailed-about-us::after {
@@ -713,6 +750,48 @@ li .navigation-item {
   margin-bottom: 70px;
 }
 
+.product-link {
+  text-decoration: none;
+  position: relative;
+  padding-top: 180px;
+}
+
+.product-link::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 0;
+  left: 0;
+  background-color: #FFE17F;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-link-vr::before {
+  background-image: url("../img/virtual-reality.svg");
+}
+
+.product-link-selfie::before {
+  background-image: url("../img/selfy.svg");
+}
+
+.product-link-camera::before {
+  background-image: url("../img/camera.svg");
+}
+
+.product-link-fitness::before {
+  background-image: url("../img/fitness.svg");
+}
+
+.product-link-clock::before {
+  background-image: url("../img/clock.svg");
+}
+
+.product-link-drone::before {
+  background-image: url("../img/quadrocopters.svg");
+}
+
 .products-yellow-list {
   display: grid;
   grid-template-columns: repeat(6, 160px);
@@ -725,32 +804,17 @@ li .navigation-item {
 .products-item {
   width: 160px;
   text-align: left;
-
+  display: flex;
 }
 
-.products-text {
+.product-link-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
   color: #000000;
   text-decoration: none;
-}
-
-.products-yellow {
-  background-color: #FFE17F;
-  width: 160px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.products-item:hover .products-yellow {
-  background-color: #FFC700;
 }
 
 .products-item:active {
@@ -809,6 +873,7 @@ li .navigation-item {
   margin: 0;
   padding: 0;
   list-style: none;
+  cursor: pointer;
 }
 
 .client-info-choice-current {
@@ -847,6 +912,7 @@ li .navigation-item {
   text-align: center;
   min-width: 160px;
   min-height: 20px;
+  cursor: pointer;
 }
 
 .client-info-choice:hover,
@@ -961,6 +1027,7 @@ li .navigation-item {
 .rare-product-button {
   content: "";
   margin: 35px 85px 34px 40px;
+  cursor: pointer;
 }
 
 .rare-text {
@@ -1157,7 +1224,6 @@ li .navigation-item {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  width: 348px;
   margin: 0;
 }
 
@@ -1167,7 +1233,6 @@ li .navigation-item {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
-  width: 560px;
   min-height: 90px;
   margin: 0;
 }
@@ -1240,6 +1305,7 @@ li .navigation-item {
   width: 253px;
   min-height: 57px;
   border: #C4C4C4 solid 3px;
+  cursor: pointer;
 }
 
 .button-subscribe:hover {
@@ -1798,6 +1864,7 @@ li .navigation-item {
   margin-bottom: auto;
   border: none;
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .sort-button:hover {
@@ -1956,6 +2023,7 @@ li .navigation-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
 }
 
 /* Mark */
@@ -1966,6 +2034,7 @@ li .navigation-item {
   width: 20px;
   height: 20px;
   border: 2px solid #CCCCCC;
+  cursor: pointer;
 }
 
 
@@ -1987,7 +2056,7 @@ li .navigation-item {
 }
 
 @supports not selector(:focus-visible) {
-  .control::focus {
+  .control:focus {
     outline: 2px solid #AF4FFF;
     outline-offset: 0;
   }
@@ -1996,6 +2065,7 @@ li .navigation-item {
 .control-input[type="checkbox"]:checked + .control-mark,
 .control-input[type="radio"]:checked + .control-mark {
   border: 2px solid #000000;
+  cursor: pointer;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -2032,6 +2102,7 @@ li .navigation-item {
 
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 17px;
+  cursor: pointer;
 }
 
 .select {
@@ -2054,6 +2125,7 @@ li .navigation-item {
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -2251,6 +2323,7 @@ li .navigation-item {
   width: 760px;
   vertical-align: middle;
   border: 3px solid #E5E5E5;
+  cursor: pointer;
 }
 
 .pagination-show-more:hover {
@@ -2309,6 +2382,7 @@ li .navigation-item {
   letter-spacing: 0.2em;
   opacity: 0.3;
   padding: 25px;
+  cursor: pointer;
 }
 
 .pagination-next {
@@ -2328,6 +2402,7 @@ li .navigation-item {
   min-width: 40px;
   min-height: 40px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .pagination a {
@@ -2386,6 +2461,11 @@ li .navigation-item {
   margin: 0;
 }
 
+.subcatalog-item {
+  display: flex;
+  justify-content: start;
+}
+
 .subcatalog,
 .popover-catalog {
   display: none;
@@ -2396,27 +2476,12 @@ li .navigation-item {
   position: relative;
 }
 
-.catalog-item::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/catalog-btn.svg");
-  width: 50px;
-  height: 50px;
-  top: -14px;
-  right: -1px;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.catalog-item:focus-within::after {
-  background-image: url("../img/catalog-btn-minus.svg");
-  opacity: 0.3;
-  z-index: 10;
-  cursor: pointer;
-}
-
 .catalog-item:focus-within .popover-catalog {
   display: block;
+}
+
+.catalog-item:focus-within .navigation-link-icon::before {
+  display: none;
 }
 
 .catalog-item:focus-within .subcatalog {
