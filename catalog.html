@@ -7,8 +7,6 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.svg">
-    <script src="//html5shiv.
-    googlecode.com/ svn/trunk/html5.js"></script>
   </head>
   <body>
     <header class="header">
@@ -108,10 +106,13 @@
         </div>
 
         <nav class="navigation">
-          <ul class="catalog">
-            <li class="catalog-item">
-              <a class="navigation-link" href="#">Каталог товаров</a>
-              <div class="popover-catalog">
+          <div class="catalog-item">
+            <a class="navigation-link navigation-link-subcatalog" href="#">
+              Каталог товаров
+            <span class="navigation-link-icon"></span>
+            </a>
+            <div class="popover-catalog">
+              <div class="popover-catalog-content">
                 <ul class="subcatalog">
                   <li class="subcatalog-item"><a class="account-link" href="catalog.html">Виртуальная реальность</a></li>
                   <li class="subcatalog-item"><a class="account-link" href="catalog.html">Фитнес-браслеты</a></li>
@@ -121,8 +122,8 @@
                   <li class="subcatalog-item"><a class="account-link" href="catalog.html">Экшн-камеры</a></li>
                 </ul>
               </div>
-            </li>
-          </ul>
+            </div>
+        </div>
 
           <ul class="navigation-list navigation-list-second-menu">
             <li class="navigation-item">
@@ -160,18 +161,18 @@
       <section class="catalog-section">
         <div class="container">
           <div class="catalog-products">
+            <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <div class="catalog-left-column">
-              <h2 class="visually-hidden">Список товаров с фильтрами</h2>
               <div class="catalog-all-filters">
                 <div class="filter">
-                  <p class="sort-item">Фильтр:</p>
+                  <span class="sort-item">Фильтр:</span>
                 </div>
                 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                   <fieldset class="catalog-filter-group">
                     <legend class="filter-group-title">Стоимость</legend>
                     <div class="range">
                       <div class="range-scale">
-                        <div class="range-bar" style="left: 0; width: 119px">
+                        <div class="range-bar">
                           <button class="range-toggle toggle-min" type="button">
                             <span class="visually-hidden">Изменить минимальную цену.</span>
                           </button>
@@ -259,9 +260,9 @@
 
             <div class="catalog-right-column">
               <div class="sort">
-                <p class="sort-item">Сортировка:</p>
+                <span class="sort-item">Сортировка:</span>
                 <div class="select">
-                  <select class="select-control" aria-label="">
+                  <select class="select-control" aria-label="Сортировка">
                     <option value="popular">Популярное</option>
                     <option value="cheap">Дешёвое</option>
                     <option value="expensive">Дорогое</option>
@@ -328,13 +329,13 @@
                   </li>
                 </ul>
 
-                <div>
+                <div  class="pagination-show-more-wrapper">
                   <button class="pagination-show-more" type="button">Загрузить ещё</button>
                 </div>
 
                 <div class="pagination">
                   <a class="pagination-prev pagination-disabled">
-                    <span>Назад</span>
+                    <span class="pagination-prev">Назад</span>
                   </a>
                   <ul class="pagination-digits">
                     <li class="pagination-current">
@@ -347,14 +348,14 @@
                       <a class="pagination-link" href="#">3</a>
                     </li>
                     <li class="pagination-disabled">
-                      <p>...</p>
+                      <span class="pagination-link pagination-link-devider">...</span>
                     </li>
                     <li class="pagination-disabled">
                       <a class="pagination-link" href="#">15</a>
                     </li>
                   </ul>
                   <a class="pagination-next" href="#">
-                    <span>Вперёд</span>
+                    <span class="pagination-next-text">Вперёд</span>
                   </a>
                 </div>
               </div>

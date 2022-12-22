@@ -30,6 +30,12 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -44,7 +50,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -62,7 +68,6 @@ body {
 .header {
   color: #000000;
   width: 1160px;
-  min-height: 186px;
   margin: 0 auto;
   position: relative;
 }
@@ -72,10 +77,11 @@ body {
   content: "";
   width: 1160px;
   height: 186px;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   top: 40px;
   left: 0;
   z-index: -100;
+  padding-bottom: 20px;
 }
 
 .header-container {
@@ -113,13 +119,13 @@ body {
 }
 
 .href-header:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .href-header:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -176,7 +182,7 @@ body {
 
 .navigation-corf-counter {
   position: absolute;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
   min-width: 21px;
   min-height: 21px;
@@ -243,7 +249,7 @@ li .navigation-item {
 }
 
 .search-field:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
@@ -277,19 +283,19 @@ li .navigation-item {
 }
 
 .search-button:hover {
-  background: #000000;
+  background-color: #000000;
   border: 2px solid #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .search-button:active {
-  background: #000000;
+  background-color: #000000;
   border: 3px solid #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .search-button:active p {
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.3;
 }
 
@@ -298,13 +304,13 @@ li .navigation-item {
 }
 
 .search-button:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .search-button:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -338,13 +344,13 @@ li .navigation-item {
 }
 
 .account-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .account-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -371,13 +377,13 @@ li .navigation-item {
 }
 
 .navigation-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .navigation-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -397,7 +403,7 @@ li .navigation-item {
   height: 50px;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,13 +470,13 @@ li .navigation-item {
 }
 
 .slider-button:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: 1px;
 }
 
 @supports not selector(:focus-visible) {
   .slider-button:focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: 1px;
   }
 }
@@ -517,13 +523,13 @@ li .navigation-item {
 }
 
 .slider-pagination-bullets-button:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: 1px;
 }
 
 @supports not selector(:focus-visible) {
   .slider-pagination-bullets-button::focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: 1px;
   }
 }
@@ -550,7 +556,7 @@ li .navigation-item {
   content: "";
   width: 1160px;
   min-height: 300px;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   top: -150px;
   left: 0;
   z-index: -100;
@@ -597,7 +603,7 @@ li .navigation-item {
 }
 
 
-.slider-pagination h2 {
+.slider-title {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -660,7 +666,7 @@ li .navigation-item {
   height: 8px;
   top: 16px;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   z-index: -50;
 }
 
@@ -677,7 +683,7 @@ li .navigation-item {
   height: 8px;
   top: 16px;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   z-index: -1;
   cursor: pointer;
 }
@@ -691,22 +697,22 @@ li .navigation-item {
 }
 
 .detailed:hover {
-  background-color: #FFE17F;
+  background-color: rgb(255, 225, 127);
   transition: all 0.2s;
 }
 
 .detailed:active {
-  background-color: #FFCC33;
+  background-color: #ffcc33;
 }
 
 .detailed-link:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: -2px;
 }
 
 @supports not selector(:focus-visible) {
   .detailed-link:focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: -2px;
   }
 }
@@ -754,6 +760,7 @@ li .navigation-item {
   text-decoration: none;
   position: relative;
   padding-top: 180px;
+  width: 100%;
 }
 
 .product-link::before {
@@ -763,7 +770,7 @@ li .navigation-item {
   height: 160px;
   top: 0;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -822,13 +829,13 @@ li .navigation-item {
 }
 
 .products-item:focus-within {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 4px;
 }
 
 @supports not selector(:focus-within) {
   .products-item:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 4px;
   }
 }
@@ -878,7 +885,7 @@ li .navigation-item {
 
 .client-info-choice-current {
   background-color: #000000;
-  color: #FFE17F;
+  color: #ffe17f;
 }
 
 .client-info-choice::after {
@@ -888,7 +895,7 @@ li .navigation-item {
   height: 8px;
   top: 33px;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   z-index: -50;
 }
 
@@ -907,9 +914,11 @@ li .navigation-item {
 
 .client-info-choice-description-button-current {
   background-color: #000000;
-  color: #FFE17F;
-  margin: 11px 9px;
-  text-align: center;
+  color: #ffe17f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9px;
   min-width: 160px;
   min-height: 20px;
   cursor: pointer;
@@ -922,25 +931,24 @@ li .navigation-item {
 
 .client-info-choice:hover .client-info-choice-description-button,
 .client-info-choice:active .client-info-choice-description-button {
-  color: #FFE17F;
-  padding-left: 35px;
+  color: #ffe17f;
 }
 
 .client-info-choice:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .client-info-choice:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
 
 /* Доставка Гарантия Кредит правая колонка детали закладок*/
 .client-info-detail {
-  width: 694px;
+  width: 894px;
   min-height: 174px;
   position: relative;
   padding-top: 73.5px;
@@ -1003,7 +1011,7 @@ li .navigation-item {
   color: #444444;
   width: 458px;
   min-height: 90px;
-  margin: 0;
+  margin: 0 110px 0 0;
   padding: 0;
 }
 
@@ -1018,7 +1026,7 @@ li .navigation-item {
   width: 125px;
   min-height: 100px;
   float: left;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   background-image: url("../img/machine.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1050,7 +1058,7 @@ li .navigation-item {
   width: 40px;
   height: 40px;
   margin: 30px auto;
-  background: rgba(220, 220, 220, 0.5);
+  background-color: rgba(220, 220, 220, 0.5);
   background-image: url("../img/i-round.svg");
   border-radius: 50%;
   border: none;
@@ -1064,7 +1072,7 @@ li .navigation-item {
 .rare-product-button {
   width: 100%;
   min-height: 100px;
-  background: #F0F0F0;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   border: none;
@@ -1073,7 +1081,7 @@ li .navigation-item {
 }
 
 .rare-product-button:hover .rare-product-logo {
-  background-color: #FFC700;
+  background-color: #ffc700;
   opacity: 1;
 }
 
@@ -1087,13 +1095,13 @@ li .navigation-item {
 }
 
 .rare-product-button:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .rare-product-button:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -1194,7 +1202,7 @@ li .navigation-item {
   box-sizing: border-box;
   border-radius: 50%;
   border: none;
-  background-color: #FFC700;
+  background-color: #ffc700;
   width: 8px;
   height: 8px;
   top: 4px;
@@ -1205,7 +1213,7 @@ li .navigation-item {
 /* Подпишитесь на рассылку*/
 .mailing {
   color: #000000;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   margin-top: 70px;
   padding-bottom: 56px;
   padding-top: 64px;
@@ -1213,7 +1221,7 @@ li .navigation-item {
 
 .mailing-adv {
   display: grid;
-  grid-template-columns: 348px 560px;
+  grid-template-columns: 338px 560px;
   gap: 252px;
   margin-bottom: 94px;
   padding-left: 7px;
@@ -1264,7 +1272,7 @@ li .navigation-item {
   padding-left: 16px;
   background-color: transparent;
   border: none;
-  border-bottom: #C4C4C4 solid 3px;
+  border-bottom: #c4c4c4 solid 3px;
   min-height: 57px;
   width: auto;
   color: #444444;
@@ -1272,7 +1280,7 @@ li .navigation-item {
 
 .field:focus {
   outline: none;
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
 }
 
 .field:disabled,
@@ -1285,7 +1293,7 @@ li .navigation-item {
 }
 
 .field:focus:invalid {
-  border-color: #FF3D3D;
+  border-color: #ff3d3d;
 }
 
 .field::placeholder {
@@ -1304,24 +1312,24 @@ li .navigation-item {
   justify-self: end;
   width: 253px;
   min-height: 57px;
-  border: #C4C4C4 solid 3px;
+  border: #c4c4c4 solid 3px;
   cursor: pointer;
 }
 
 .button-subscribe:hover {
-  background: #000000;
+  background-color: #000000;
   border: 3px solid #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button-subscribe:active {
-  background: #000000;
+  background-color: #000000;
   border: 3px solid #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button-subscribe:active p {
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.3;
 }
 
@@ -1330,13 +1338,13 @@ li .navigation-item {
 }
 
 .button-subscribe:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .button-subscribe:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -1352,13 +1360,13 @@ li .navigation-item {
 }
 
 .ok {
-  fill: #08AF00;
+  fill: #08af00;
   margin-right: 16.5px;
 }
 
 /*---footer---*/
 .footer {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #444444;
   min-height: 321px;
 }
@@ -1381,7 +1389,7 @@ li .navigation-item {
   height: 7px;
   left: 0;
   bottom: 80px;
-  background-color: #FFC700;
+  background-color: #ffc700;
   content: "";
 }
 
@@ -1442,26 +1450,26 @@ li .navigation-item {
 
 .academy-logo-image {
   display: block;
-  fill: #FFC700;
+  fill: #ffc700;
 }
 
 .academy-logo-image:hover {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .academy-logo-image:active {
-  fill: #FFFFFF;
+  fill: #ffffff;
   opacity: 0.3;
 }
 
 .academy-logo-link:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: -2px;
 }
 
 @supports not selector(:focus-visible) {
   .academy-logo-link:focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: -2px;
   }
 }
@@ -1484,29 +1492,29 @@ li .navigation-item {
   min-height: 33px;
   margin-left: 0;
   margin-right: 0;
-  fill: #FFC700;
+  fill: #ffc700;
   padding-top: 0;
   padding-left: 0;
 }
 
 .footer-device-link:hover {
-  fill: #FFC700;
+  fill: #ffc700;
   opacity: 0.6;
 }
 
 .footer-device-link:active {
-  fill: #FFC700;
+  fill: #ffc700;
   opacity: 0.3;
 }
 
 .footer-device-link:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: -2px;
 }
 
 @supports not selector(:focus-visible) {
   .footer-device-link:focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: -2px;
   }
 }
@@ -1542,7 +1550,7 @@ li .navigation-item {
 }
 
 .footer-info-link:hover {
-  color: #FFC700;
+  color: #ffc700;
 }
 
 .footer-info-link:hover::before {
@@ -1552,12 +1560,12 @@ li .navigation-item {
   height: 2px;
   left: 1px;
   right: 10px;
-  background-color: #FFC700;
+  background-color: #ffc700;
   content: "";
 }
 
 .footer-info-link:active {
-  color: #FFC700;
+  color: #ffc700;
   opacity: 0.3;
 }
 
@@ -1567,19 +1575,19 @@ li .navigation-item {
   height: 2px;
   left: 15px;
   right: 15px;
-  background-color: #FFC700;
+  background-color: #ffc700;
   opacity: 0.3;
   content: "";
 }
 
 .footer-info-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: -14px;
 }
 
 @supports not selector(:focus-visible) {
   .footer-info-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid rgb(175, 79, 255);
     outline-offset: -14px;
   }
 }
@@ -1599,26 +1607,26 @@ li .navigation-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer-telephone-address-phone:hover {
-  color: #FFC700;
+  color: #ffc700;
 }
 
 .footer-telephone-address-phone:active {
-  color: #FFC700;
+  color: #ffc700;
   opacity: 0.3;
 }
 
 .footer-telephone-address-phone:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .footer-telephone-address-phone:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -1656,7 +1664,7 @@ li .navigation-item {
 
 .footer-social-link {
   display: block;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border: none;
   background-repeat: no-repeat;
@@ -1665,21 +1673,21 @@ li .navigation-item {
 }
 
 .footer-social-link:hover {
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .footer-social-link:active {
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .footer-social-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .footer-social-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -1747,7 +1755,7 @@ li .navigation-item {
   font-size: 16px;
   line-height: 20px;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 -10 0;
   padding: 0;
 }
 
@@ -1755,12 +1763,14 @@ li .navigation-item {
   color: inherit;
   text-decoration: none;
   min-height: 20px;
+  margin: 0 0 34px 0;
 }
 
 .breadcrumbs-item {
   position: relative;
   margin-right: 36px;
   list-style-type: none;
+  margin: 0 36px 10px 0;
 }
 
 .breadcrumbs-item::after {
@@ -1788,13 +1798,13 @@ li .navigation-item {
 }
 
 .breadcrumbs-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .breadcrumbs-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -1802,23 +1812,21 @@ li .navigation-item {
 /* ФИЛЬТР СОРТИРОВКА*/
 .catalog-section {
   color: #000000;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .catalog-products {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   display: flex;
-  margin-top: 34px;
 }
 
 .catalog-left-column {
   width: 320px;
-  min-height: 1316px;
+  padding-bottom: 50px;
 }
 
 .catalog-all-filters {
   width: 200px;
-  min-height: 1316px;
   z-index: -100;
   margin: 0 60px;
 }
@@ -1826,7 +1834,7 @@ li .navigation-item {
 /* Надпись ФИЛЬТР */
 .filter {
   min-height: 70px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: #000000;
   display: flex;
   justify-content: flex-start;
@@ -1837,7 +1845,7 @@ li .navigation-item {
 .sort {
   width: 760px;
   min-height: 70px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: #000000;
   display: flex;
   justify-content: space-between;
@@ -1846,12 +1854,14 @@ li .navigation-item {
 }
 
 .sort-item {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway';
+  font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1876,13 +1886,13 @@ li .navigation-item {
 }
 
 .sort-button:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .sort-button:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
     opacity: 0.2;
   }
@@ -1922,7 +1932,7 @@ li .navigation-item {
   position: relative;
   height: 2px;
   margin-bottom: 16px;
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   border-radius: 2px;
 }
 
@@ -1930,20 +1940,22 @@ li .navigation-item {
   position: absolute;
   height: 2px;
   background-color: #000000;
+  left: 0;
+  width: 119px
 }
 
 .range-toggle {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
   border: 2px solid #242424;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .range-toggle:hover {
-  background: #ececec;
+  background-color: #ececec;
 }
 
 .range-toggle:active {
@@ -1952,13 +1964,13 @@ li .navigation-item {
 }
 
 .range-toggle:focus-visible {
-  outline: 1px solid #AF4FFF;
+  outline: 1px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .range-toggle:focus {
-    outline: 1px solid #AF4FFF;
+    outline: 1px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -1966,14 +1978,14 @@ li .navigation-item {
 .toggle-min {
   top: -8px;
   left: -10px;
-  background: #EBEBEB;
+  background-color: #ebebeb;
   border: 2px solid #000000;
 }
 
 .toggle-max {
   top: -8px;
   right: -10px;
-  background: #EBEBEB;
+  background-color: #ebebeb;
   border: 2px solid #000000;
 }
 
@@ -2008,6 +2020,7 @@ li .navigation-item {
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+  color:#000000;
 }
 
 /* Control Черный Белый Есть Нет*/
@@ -2033,7 +2046,7 @@ li .navigation-item {
   left: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #CCCCCC;
+  border: 2px solid #cccccc;
   cursor: pointer;
 }
 
@@ -2051,13 +2064,13 @@ li .navigation-item {
 }
 
 .control-input:focus-visible + .control-mark {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .control:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -2065,13 +2078,12 @@ li .navigation-item {
 .control-input[type="checkbox"]:checked + .control-mark,
 .control-input[type="radio"]:checked + .control-mark {
   border: 2px solid #000000;
-  cursor: pointer;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 3px;
   content: "";
   background-image: url("../img/checbox.svg");
   background-size: 10px 10px;
@@ -2085,8 +2097,8 @@ li .navigation-item {
 
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 3px;
   width: 10px;
   height: 10px;
   background-color: #242424;
@@ -2120,7 +2132,7 @@ li .navigation-item {
   font-size: 18px;
   line-height: 30px;
   background-color: transparent;
-  width: 100%;
+  width: 110px;
   border: none;
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -2137,13 +2149,13 @@ li .navigation-item {
 }
 
 .select-control:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .select-control:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -2163,8 +2175,6 @@ li .navigation-item {
 /* правая колонка каталога */
 .catalog-right-column {
   width: 840px;
-  min-height: 1310px;
-  background: #FFFFFF;
   color: #000000;
 }
 
@@ -2172,6 +2182,7 @@ li .navigation-item {
 .product-cards {
   display: grid;
   gap: 44px;
+  background-color: #ffffff;
   padding-top: 70px;
   padding-bottom: 78px;
   padding-left: 40px;
@@ -2187,8 +2198,7 @@ li .navigation-item {
   padding: 0;
   text-align: center;
   color: #ffffff;
-  gap: 40px;
-  row-gap: 44px;
+  gap: 40px 44px;
 }
 
 .product-card {
@@ -2206,7 +2216,7 @@ li .navigation-item {
 
 .product-card-image {
   vertical-align: bottom;
-  padding: 0 0 32px 0;
+  margin: 0 0 32px 0;
 }
 
 .product-card-descr {
@@ -2238,7 +2248,6 @@ li .navigation-item {
   text-align: right;
   color: #444444;
   background-color: #ffffff;
-  margin-top: 32px;
 }
 
 .product-card-wrapping {
@@ -2273,7 +2282,7 @@ li .navigation-item {
   height: 8px;
   top: 16px;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   z-index: -1;
 }
 
@@ -2284,7 +2293,7 @@ li .navigation-item {
 
 .product-card:active .product-card-detailed::after {
   opacity: 1;
-  background-color: #FFC700;
+  background-color: #ffc700;
 }
 
 .product-card:hover {
@@ -2296,18 +2305,19 @@ li .navigation-item {
 }
 
 .product-card:focus-within {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-within) {
   .product-card:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
 
 /*Загрузить еще*/
+
 .pagination-show-more {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -2322,7 +2332,7 @@ li .navigation-item {
   min-height: 55px;
   width: 760px;
   vertical-align: middle;
-  border: 3px solid #E5E5E5;
+  border: 3px solid #e5e5e5;
   cursor: pointer;
 }
 
@@ -2335,23 +2345,23 @@ li .navigation-item {
 }
 
 .pagination-show-more:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
-  border: 3px solid #E5E5E5;
+  border: 3px solid #e5e5e5;
 }
 
 @supports not selector(:focus-visible) {
   .pagination-show-more:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
-    border: 3px solid #E5E5E5;
+    border: 3px solid #e5e5e5;
   }
 }
 
 /* Пагинация вперед-назад*/
 .pagination {
   color: #444444;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   text-transform: uppercase;
   list-style-type: none;
   display: flex;
@@ -2365,8 +2375,8 @@ li .navigation-item {
 
 .pagination-digits {
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40px);
   min-width: 200px;
   min-height: 71px;
   margin: 0;
@@ -2401,8 +2411,14 @@ li .navigation-item {
   line-height: 20px;
   min-width: 40px;
   min-height: 40px;
-  padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-link-devider {
+  pointer-events: none;
 }
 
 .pagination a {
@@ -2410,29 +2426,29 @@ li .navigation-item {
   text-decoration: none;
 }
 
-.pagination-current a {
+.pagination-current .pagination-link {
   opacity: 0.6;
 }
 
-.pagination p,
-.pagination-disabled a {
+.pagination .device-detail-description,
+.pagination-disabled .pagination-link {
   opacity: 0.3;
 }
 
-.pagination-next a {
+.pagination-next .pagination-link {
   color: #000000;
 }
 
 .pagination-prev:not(:disabled):hover,
 .pagination-next:not(:disabled):hover,
 .pagination-link:not(:disabled):hover {
-  background: #DCDCDC;
+  background-color: #dcdcdc;
 }
 
 .pagination-prev:active,
 .pagination-next:active,
 .pagination-link:active {
-  background: #DCDCDC;
+  background-color: #dcdcdc;
   color: #000000;
   opacity: 0.3;
 }
@@ -2440,7 +2456,7 @@ li .navigation-item {
 .pagination-prev:focus-visible,
 .pagination-next:focus-visible,
 .pagination-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
@@ -2448,7 +2464,7 @@ li .navigation-item {
   .pagination-prev:focus,
   .pagination-next:focus,
   .pagination-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -2505,7 +2521,7 @@ li .navigation-item {
   width: 1160px;
   padding: 33px 60px;
   color: #000000;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   min-height: 180px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -2608,7 +2624,7 @@ li .navigation-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .cart-item .button {
@@ -2626,7 +2642,7 @@ li .navigation-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   color: #ffffff;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -2652,12 +2668,12 @@ li .navigation-item {
 }
 
 .button-open-cart:hover {
-  background: #FFE17F;
+  background-color: #ffe17f;
   color: #000000;
 }
 
 .button-open-cart:active {
-  background: #FFE17F;
+  background-color: #ffe17f;
   opacity: 0.3
 }
 
@@ -2670,13 +2686,13 @@ li .navigation-item {
 }
 
 .button-open-cart:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
   .button-open-cart:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
 }
@@ -2690,13 +2706,13 @@ li .navigation-item {
 }
 
 .cart-link:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: -20px;
 }
 
 @supports not selector(:focus-visible) {
   .cart-link:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: -20px;
   }
 }
@@ -2718,13 +2734,13 @@ li .navigation-item {
 }
 
 .cart-item-button:focus-visible {
-  outline: 2px solid #AF4FFF;
+  outline: 2px solid #af4fff;
   outline-offset: 0;
 }
 
 @supports not selector(:focus-visible) {
   .cart-item-button:focus {
-    outline: 2px solid #AF4FFF;
+    outline: 2px solid #af4fff;
     outline-offset: 0;
   }
 }
@@ -2737,7 +2753,7 @@ li .navigation-item {
   display: flex;
   width: 100%;
   height: 100%;
-  background: rgba(240, 240, 240, 0.9);
+  background-color: rgba(240, 240, 240, 0.9);
   opacity: 0;
   visibility: hidden;
 }
@@ -2841,7 +2857,7 @@ li .navigation-item {
 }
 
 .tooltip-toggle:hover .tooltip-icon {
-  color: #AF7842;
+  color: #af7842;
 }
 
 .tooltip-text {
@@ -2850,7 +2866,7 @@ li .navigation-item {
   width: 200px;
   min-height: 120px;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -2924,7 +2940,7 @@ li .navigation-item {
   padding: 0;
   padding-left: 20px;
   padding-right: 40px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   border: none;
   height: 60px;
   width: auto;
@@ -2967,7 +2983,7 @@ li .navigation-item {
   margin: 0;
   width: 60px;
   height: 60px;
-  background: rgba(240, 240, 240, 0.9);
+  background-color: rgba(240, 240, 240, 0.9);
   border: none;
   text-align: center;
   font-family: "Rubik", sans-serif;
@@ -2978,7 +2994,7 @@ li .navigation-item {
 }
 
 .modal-form-field:hover {
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
 }
 
 .modal-form-field:disabled {
@@ -2991,11 +3007,11 @@ li .navigation-item {
 }
 
 .modal-form-field:invalid {
-  border: #FF3D3D solid 2px;
+  border: #ff3d3d solid 2px;
 }
 
 .modal-form-field:focus:invalid {
-  border: #FF3D3D solid 2px;
+  border: #ff3d3d solid 2px;
 }
 
 .modal-form-field::placeholder {
@@ -3004,7 +3020,7 @@ li .navigation-item {
 }
 
 .modal-form-field:invalid + .funny-address {
-  color: #FF3D3D;
+  color: #ff3d3d;
 }
 
 .funny-address {
@@ -3048,7 +3064,7 @@ li .navigation-item {
   height: 8px;
   top: 16px;
   left: 0;
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   z-index: -1;
 }
 
