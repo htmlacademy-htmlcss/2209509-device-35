@@ -230,7 +230,6 @@ li .navigation-item {
 
 .search-field {
   box-sizing: border-box;
-  grid-column: 1 / 2;
   margin: 0;
   padding: 0;
   padding-left: 48px;
@@ -239,7 +238,9 @@ li .navigation-item {
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
   min-height: 40px;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 2;
   color: #000000;
   font: inherit;
   background-image: url("../img/search.svg");
@@ -264,12 +265,9 @@ li .navigation-item {
 }
 
 .search-button {
-  box-sizing: border-box;
-  grid-column: -1 / -2;
   margin: 0;
   padding: 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   background-color: transparent;
   border: 2px solid #000000;
@@ -824,20 +822,17 @@ li .navigation-item {
   text-decoration: none;
 }
 
+.product-link:hover::before {
+  background-color: #ffc700;
+}
+
 .products-item:active {
   opacity: 0.3;
 }
 
-.products-item:focus-within {
+.products-link:focus {
   outline: 2px solid #af4fff;
   outline-offset: 4px;
-}
-
-@supports not selector(:focus-within) {
-  .products-item:focus {
-    outline: 2px solid #af4fff;
-    outline-offset: 4px;
-  }
 }
 
 /* Доставка Гарантия кредит закладки*/
@@ -2754,6 +2749,7 @@ li .navigation-item {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
+  z-index: 99;
   opacity: 0;
   visibility: hidden;
 }
@@ -2769,7 +2765,7 @@ li .navigation-item {
 }
 
 .modal-auth {
-  width: 760px;
+  width: 960px;
 }
 
 .modal-content {
@@ -3052,12 +3048,11 @@ li .navigation-item {
 }
 
 .send-button {
-  background-color: #fffFFF;
   border: none;
-  z-index: 2;
+  background-color: #ffffff;
 }
 
-.send-button::after {
+.send-button::before {
   content: "";
   position: absolute;
   width: 220px;
@@ -3065,7 +3060,7 @@ li .navigation-item {
   top: 16px;
   left: 0;
   background-color: #ffe17f;
-  z-index: -1;
+  z-index: -50;
 }
 
 /* самые приоритетные свойства*/
