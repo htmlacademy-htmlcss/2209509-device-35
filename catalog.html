@@ -6,19 +6,19 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="favicon.png">
   </head>
   <body>
     <header class="header">
       <div class="header-container">
 
-        <a class="href-header" href="./index.html">
-          <img src="img/logo.svg" alt="Девайс" class="logo-img">
+        <a class="href-header" href="index.html">
+          <img src="img/logo.svg" class="logo-img" alt="Переход на главную страницу">
         </a>
 
         <div class="navigation-user-grid">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <input class="search-field" type="search" name="search" id="search" placeholder="Текст поиска">
             <button class="search-button" type="submit">
               <span>Найти</span>
             </button>
@@ -28,19 +28,22 @@
             <li class="navigation-item">
               <a class="account-link account-link-login" href="#">
                 <svg class="account-icon" aria-hidden="true" focusable="false" width="13" height="13"
-                  viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логин.">
+                  viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Логин.">
                   <path
                     d="M0 12.79h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 2.39 3 4.29c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z" />
-                </svg></a>
+                </svg>
+                Коля Петухов</a>
             </li>
             <li class="navigation-item">
-              <a class="account-link account-link-login" href="#">
-                <span class="account-link account-link-logout">Коля Петухов</span></a>
+              <a class="account-link account-link-login account-off" href="#">
+                Выйти</a>
             </li>
             <li class="navigation-item navigation-compare">
               <a class="account-link" href="#">
                 <svg class="account-icon" aria-hidden="true" focusable="false" width="10" height="13"
-                  viewBox="0 0 10 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Сравнить.">
+                  viewBox="0 0 10 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Сравнить.">
                   <path d="M6 .79H4v12h2v-12ZM2 4.79H0v8h2v-8ZM10 3.79H8v9h2v-9Z" />
                 </svg>
                 Сравнить</a>
@@ -48,24 +51,24 @@
             <li class="navigation-item navigation-corf">
               <a class="account-link navigation-cart" href="#">
                 <svg class="account-icon" aria-hidden="true" focusable="false" width="16" height="15"
-                  viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Корзина.">
+                  viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Корзина.">
                   <path
                     d="m15.3 5.79-3.5.2-3.2-4.9c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.69l2.2 3.2H5.9L8 2.69Z" />
                 </svg>
-                <span class="navigation-corf-counter">2</span>
+                  <span class="navigation-corf-counter">2</span>
                 Корзина
               </a>
               <div class="popover popover-cart">
                 <div class="popover-content">
-                  <h2 class="visually-hidden popover-title">Содержимое корзины</h2>
                   <ul class="cart-items-list">
                     <li class="cart-item">
-                      <a class="cart-link" href="./catalog.html">
+                      <a class="cart-link" href="catalog.html">
                         <img class="popover-img" src="img/selfy-in-bascket.jpg" width="39" height="43"
                           alt="Любительская селфи-палка.">
                         <p class="cart-item-title">Любительская селфи-палка</p>
                       </a>
-                      <button type="button" class="cart-item-button button">
+                      <button class="cart-item-button bascket-button" type="button">
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="currentColor"
                           xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Удалить из корзины.">
                           <path
@@ -75,12 +78,12 @@
                       </button>
                     </li>
                     <li class="cart-item">
-                      <a class="cart-link" href="./catalog.html">
+                      <a class="cart-link" href="catalog.html">
                         <img class="popover-img" src="img/selfy-in-bascket-two.jpg" width="39" height="43"
                           alt="Профессиональная селфи-палка.">
                         <p class="cart-item-title">Профессиональная селфи-палка</p>
                       </a>
-                      <button type="button" class="cart-item-button button">
+                      <button class="cart-item-button bascket-button" type="button">
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="currentColor"
                           xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Удалить из корзины.">
                           <path
@@ -94,11 +97,9 @@
                     <p>Товаров: 2</p>
                     <p>Сумма: 2000 ₽</p>
                   </div>
-                  <div class="cart-button">
-                    <button class="button-open-cart" type="button">
+                    <button class="cart-button button-open-cart" type="button">
                       <span>Открыть корзину</span>
                     </button>
-                  </div>
                 </div>
               </div>
             </li>
@@ -253,7 +254,7 @@
                       </li>
                     </ul>
                   </fieldset>
-                    <button class="detailed detailed-button" type="submit">Показать</button>
+                    <button class="button button-show" type="submit">Показать</button>
                 </form>
               </div>
             </div>
@@ -287,8 +288,8 @@
                     <!--Для того чтобы отобразить пометку new нужно добавить класс new к ссылке-->
                     <a class="product-card-link" href="product.html">
                       <div class="product-card-image">
-                      <img class="product-card-image" src="img/product-1.jpg" width="360" height="380"
-                        alt="Товар «Любительская селфи-палка».">
+                      <img class="product-card-image" src="img/amateur-selfie-stick.jpg" width="360" height="380"
+                        alt="«Любительская селфи-палка».">
                       </div>
                       <div class="product-card-description">
                         <h3 class="product-card-title">Любительская<br> селфи-палка</h3>
@@ -300,8 +301,8 @@
                   <li class="product-card">
                     <a class="product-card-link" href="#">
                       <div class="product-card-image">
-                      <img class="product-card-image" src="img/product-2.jpg" width="360"
-                        height="380" alt="Товар «Профессиональная селфи-палка».">
+                      <img class="product-card-image" src="img/professional-selfie-stick.jpg" width="360"
+                        height="380" alt="«Профессиональная селфи-палка».">
                       </div>
                       <div class="product-card-description">
                         <h3 class="product-card-title">Профессиональная селфи-палка</h3>
@@ -313,8 +314,8 @@
                   <li class="product-card">
                     <a class="product-card-link" href="#">
                       <div class="product-card-image">
-                      <img class="product-card-image" src="img/product-3.jpg" width="360"
-                        height="380" alt="Товар «Непотопляемая селфи-палка».">
+                      <img class="product-card-image" src="img/unsinkable-selfie-stick.jpg" width="360"
+                        height="380" alt="«Непотопляемая селфи-палка».">
                       </div>
                       <div class="product-card-description">
                         <h3 class="product-card-title">Непотопляемая<br> селфи-палка</h3>
@@ -325,10 +326,12 @@
                   </li>
                   <li class="product-card">
                     <a class="product-card-link" href="#">
-                      <img class="product-card-image" src="img/product-4.jpg" width="360"
-                        height="380" alt="Товар «Селфи-палка Следуй за мной».">
+                      <div class="product-card-image">
+                      <img class="product-card-image" src="img/selfie-stick-follow-me.jpg" width="360"
+                        height="380" alt="Селфи-палка «Следуй за мной».">
+                      </div>
                       <div class="product-card-description">
-                        <h3 class="product-card-title">Селфи-палка «Следуй<br> за мной»</h3>
+                        <h3 class="product-card-title">Селфи-&nbsp;палка&nbsp;«Следуй за мной»</h3>
                         <b class="product-card-price">1 500 ₽</b>
                       </div>
                       <span class="product-card-wrapping"><span class="product-card-detailed" >Подробнее</span></span>
@@ -377,7 +380,7 @@
       <div class="footer-container">
 
         <a class="footer-device-link" href="#"><img class="footer-device-logo" src="img/footer-logo.svg" width="145"
-            height="36" alt="Логотип Девайс."></a>
+            height="50" alt="Логотип Девайс."></a>
         <address class="footer-contacts-address">
           <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
@@ -418,7 +421,7 @@
           <a class="footer-telephone-address-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
         <div class="academy-logo">
-          <a class="academy-logo-link" href="https://htmlacademy.ru/">
+          <a class="academy-logo-link" href="https://htmlacademy.ru/" aria-label="Логотип академии">
             <svg class="academy-logo-image" aria-hidden="true" focusable="false" width="115" height="33"
               viewBox="0 0 115 33" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Магазин «Девайс».">
               <path
