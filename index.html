@@ -12,17 +12,17 @@
       <div class="header-container">
 
         <a class="href-header" href="index.html">
-          <img src="img/logo.svg" class="logo-img" alt="Переход на главную страницу">
+          <img src="img/logo.svg" class="logo-img" alt="Переход на главную страницу." width="144" height="36">
         </a>
 
         <div class="navigation-user-grid">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="search-form-label">
+            <label class="search-form-label" tabindex="0">
               <span class="visually-hidden">Поиск по сайту</span>
             <input class="search-field" type="search" name="search" placeholder="Поиск по сайту">
             </label>
             <button class="search-button" type="submit">
-              Найти
+              <span class="search-button-text">Найти</span>
             </button>
           </form>
 
@@ -96,7 +96,7 @@
                     <p>Сумма: 2000 ₽</p>
                   </div>
                     <button class="cart-button button-open-cart" type="button">
-                      <span>Открыть корзину</span>
+                      <span class="button-open-cart-text">Открыть корзину</span>
                     </button>
                 </div>
               </div>
@@ -113,12 +113,22 @@
               <div class="popover-catalog">
                 <div class="popover-catalog-content">
                   <ul class="subcatalog">
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Виртуальная реальность</a></li>
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Фитнес-браслеты</a></li>
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Квадрокоптеры</a></li>
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a></li>
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Умные часы</a></li>
-                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Экшн-камеры</a></li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Виртуальная реальность</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Фитнес-браслеты</a></li>
+                    <li class="subcatalog-item"><a class="subcatalog-link" href="catalog.html">Квадрокоптеры</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Умные часы</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Экшн-камеры</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -145,7 +155,7 @@
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <div class="slider-pagination-group">
-                <img class="slider-logo" src="img/quadrocopter.png" width="560" height="560" alt="Фото дрона">
+                <img class="slider-logo" src="img/quadrocopter.png" width="560" height="560" alt="Фото дрона.">
                 <div class="slider-description">
                   <h2 class="slider-title">Порхает как бабочка, жалит как пчела!</h2>
                   <p class="device-detail-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
@@ -278,13 +288,19 @@
           <div class="client-info">
             <ul class="client-info-description">
               <li class="client-info-description-item">
-                <button class="tab-service-button tab-service-button-current" type="button">ДОСТАВКА</button>
+                <a href="#" class="tab-service-button tab-service-button-current">
+                  <span class="tab-service-button-current-text">Доставка</span>
+                </a>
               </li>
               <li class="client-info-description-item">
-                <button class="button tab-service-button" type="button">ГАРАНТИЯ</button>
+                <a href="#" class="button tab-service-button">
+                  <span>Гарантия</span>
+                </a>
               </li>
               <li class="client-info-description-item">
-                <button class="button tab-button tab-service-button" type="button">КРЕДИТ</button>
+                <a href="#" class="button tab-button tab-service-button">
+                  <span>Кредит</span>
+                </a>
               </li>
             </ul>
             <div class="client-info-detail logo-delivery">
@@ -322,6 +338,7 @@
             <span class="rare-text">ДОСТАВИМ РЕДКИЙ ТОВАР ПОД ЗАКАЗ</span>
             <span class="rare-i-icon-container">
               <span class="rare-i-round">
+                i
               </span>
             </span>
           </button>
@@ -349,7 +366,7 @@
               <p class="about-us-text">Вы&nbsp;можете забрать товар сами, заехав в&nbsp;наш офис. <br>Заодно сможете проверить работоспособность покупки.</p>
               <h3 class="about-us-info-header">Интернет-магазин «Девайс»</h3>
               <p class="about-us-text">Санкт-Петербург, набережная реки Карповки, 5 литера П.
-                <a class="about-us-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
+                <a class="about-us-text about-us-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
               </p>
               <h3 class="about-us-info-header">Время работы</h3>
               <p class="about-us-text">пн-пт: с 10:00 до 22:00<br>
@@ -370,8 +387,11 @@
           <div class="mailing-email">
             <span class="visually-hidden">  Подписка</span>
             <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="field-label">
+                <span class="visually-hidden">Подпишитесь на рассылку</span>
               <input class="field" type="email" id="mailing-email-input" name="mailing-email-input"
                 placeholder="Ваш e-mail">
+              </label>
               <button class="button-subscribe" type="submit">
                 <span class="button-subscribe-text">ПОДПИСАТЬСЯ</span>
               </button>
@@ -409,17 +429,26 @@
         <div class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
-            <li class="footer-social-item">
+            <li class="footer-social-item" tabindex="0">
               <a class="footer-social-link footer-social-tg" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Facebook</span></a>
+                <svg class="footer-social-icon" width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.4431 0.0735832L0.623071 4.63158C-0.183596 4.95558 -0.178929 5.40558 0.475071 5.60625L3.50974 6.55292L10.5311 2.12292C10.8631 1.92092 11.1664 2.02958 10.9171 2.25092L5.2284 7.38492H5.22707L5.2284 7.38558L5.01907 10.5136C5.32574 10.5136 5.46107 10.3729 5.63307 10.2069L7.10707 8.77358L10.1731 11.0382C10.7384 11.3496 11.1444 11.1896 11.2851 10.5149L13.2977 1.02958C13.5037 0.203583 12.9824 -0.170417 12.4431 0.0735832Z" fill="#444444"/>
+                  </svg>
+                  <span class="visually-hidden">Telegramm</span></a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link footer-social-yt" href="https://www.youtube.com/user/htmlacademyru"><span
-                  class="visually-hidden">Youtube</span></a>
+            <li class="footer-social-item" tabindex="0">
+              <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
+                <svg class="footer-social-icon" width="16" height="11" viewBox="0 0 16 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.6671 1.67464C15.5765 1.35146 15.4 1.05887 15.1564 0.827973C14.9059 0.589975 14.5989 0.41973 14.2644 0.333306C13.0124 0.00330585 7.99641 0.00330593 7.99641 0.00330593C5.9053 -0.0204856 3.8147 0.0841556 1.73641 0.316639C1.40187 0.409448 1.09545 0.583497 0.844411 0.823306C0.597745 1.06064 0.419078 1.35331 0.325745 1.67397C0.10154 2.8818 -0.00739387 4.1082 0.000411455 5.33664C-0.00758854 6.56397 0.101078 7.78997 0.325745 8.99931C0.417078 9.31864 0.595078 9.60997 0.842411 9.84531C1.08974 10.0806 1.39774 10.2506 1.73641 10.3406C3.00508 10.67 7.99641 10.67 7.99641 10.67C10.0902 10.6938 12.1835 10.5892 14.2644 10.3566C14.5989 10.2702 14.9059 10.1 15.1564 9.86197C15.3999 9.63112 15.5762 9.33849 15.6664 9.01531C15.8965 7.80794 16.0083 6.58103 16.0004 5.35197C16.0177 4.11771 15.906 2.88502 15.6671 1.67397V1.67464ZM6.40174 7.61931V3.05464L10.5751 5.33731L6.40174 7.61931Z" fill="#444444"/>
+                  </svg>
+                  <span class="visually-hidden">Youtube</span></a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link footer-social-tw" href="https://twitter.com/htmlacademy_ru"><span
-                  class="visually-hidden">Twitter</span></a>
+            <li class="footer-social-item" tabindex="0">
+              <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
+                <svg class="footer-social-icon" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.7 0.155143C11.2 -0.344857 12.3 0.455143 12.9 1.25514C13.4 1.05514 14 0.855143 14.6 0.655143C14.6 1.45514 14.1 2.05514 13.8 2.25514C14.5 2.45514 15 1.85514 15 1.85514C14.9 2.75514 14.1 3.55514 13.6 3.75514C13.4 10.0551 10.8 14.1551 4.7 14.0551C4.2 14.0551 4.8 14.0551 4.3 14.0551C4 14.0551 0.6 13.6551 0 12.2551C2 12.4551 3.4 11.8551 4.1 11.1551C3.3 10.8551 1.7 10.7551 1.5 8.35514C1.8 8.55514 2 8.65514 2.6 8.55514C1.5 7.75514 0.3 7.05514 0.4 5.05514C0.7 5.35514 1.3 5.55514 1.6 5.45514C1 5.25514 -0.2 2.35514 0.8 0.855143C2.4 2.55514 4.1 4.25514 7.1 4.35514C7.3 2.25514 8.1 0.855143 9.7 0.155143Z" fill="#444444"/>
+                  </svg>
+                  <span class="visually-hidden">Twitter</span></a>
             </li>
           </ul>
         </div>
@@ -429,6 +458,7 @@
         </address>
         <div class="academy-logo">
           <a class="academy-logo-link" href="https://htmlacademy.ru/" aria-label="Логотип академии">
+            <span class="visually-hidden">Логотип академии</span>
             <svg class="academy-logo-image" aria-hidden="true" focusable="false" width="115" height="33"
               viewBox="0 0 115 33" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Магазин «Девайс».">
               <path
@@ -450,7 +480,6 @@
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group field-group-name">
               <label class="modal-label" for="auth-name">Ваше имя:</label>
-              <span class="your-name">Добавьте имя</span>
               <input class="modal-form-field" type="text" id="auth-name" name="auth-name" placeholder="Введите имя">
             </p>
             <p class="field-group field-group-email">
