@@ -265,7 +265,7 @@ body {
 
 .catalog-navigation-list-second-menu {
   display: grid;
-  grid-template-columns: repeat( 3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px 47px;
   align-items: start;
   z-index: 99;
@@ -283,7 +283,7 @@ body {
 
 .navigation-list-second-menu {
   display: grid;
-  grid-template-columns: repeat( 3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px 47px;
   align-items: end;
   z-index: 99;
@@ -404,12 +404,12 @@ body {
 
 .search-button:focus-visible::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
-  width: 165.656px;
+  width: 166px;
   height: 44px;
-  top: 2px;
-  left: 2px;
+  top: -6px;
+  left: -6px;
   border: 2px solid #af4fff;
 }
 
@@ -418,24 +418,13 @@ body {
   color: #ffffff;
 }
 
-.search-button:active .search-button-text {
-  color: #ffffff;
-  opacity: 0.3;
+.search-button:active {
+  color: #4c4c4c;
+  background-color: #000000;
 }
 
 .search-button:disabled {
   opacity: 0.3;
-}
-
-.search-button:focus-visible::after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 165.656px;
-  height: 44px;
-  top: -6px;
-  left: -6px;
-  border: 2px solid #af4fff;
 }
 
 .account-link {
@@ -524,7 +513,7 @@ body {
 
 .navigation-link-subcatalog:hover {
   opacity: 1;
-  color:#000000;
+  color: #000000;
 }
 
 .catalog-subcatalog {
@@ -662,7 +651,7 @@ body {
 }
 
 .slider-pagination-bullets-button:focus::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: -6px;
@@ -948,7 +937,7 @@ body {
   left: -1px;
   height: 100%;
   width: 283px;
-  background-color:#000000;
+  background-color: #000000;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
@@ -959,14 +948,14 @@ body {
   margin-right: 20px;
 }
 
-.tab-service-button-current-text:active {
+.tab-service-button-current:active {
   color: #ffe17f;
-  margin-left: 35px;
+  padding-left: 35px;
 }
 
-.tab-service-button-current-text:hover {
+.tab-service-button-current:hover {
   color: #ffe17f;
-  margin-left: 35px;
+  padding-left: 35px;
 }
 
 .tab-service-button-current:focus {
@@ -1108,7 +1097,7 @@ body {
 }
 
 .rare-i-round:hover {
-  color:#000000;
+  color: #000000;
 }
 
 .rare-product-button:hover .rare-product-logo {
@@ -1326,7 +1315,7 @@ body {
 }
 
 .field:focus {
-  background-color:#dcdcdc;
+  background-color: #dcdcdc;
   outline: #dcdcdc;
 }
 
@@ -1679,10 +1668,6 @@ body {
   height: 40px;
 }
 
-path:active {
-  fill: #c7a014;
-}
-
 .footer-social-icon {
   align-items: center;
   margin-left: 13px;
@@ -1692,8 +1677,9 @@ path:active {
   background-color: #ffc700;
 }
 
-.footer-social-link:active {
+.footer-social-link:active path{
   background-color: #ffc700;
+  fill: #c7a014;
 }
 
 .footer-social-item:focus-visible {
@@ -2020,7 +2006,7 @@ path:active {
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
-  color:#000000;
+  color: #000000;
 }
 
  /* сontrol */
@@ -2683,8 +2669,9 @@ path:active {
   color: #000000;
 }
 
-.button-open-cart:active .button-open-cart-text {
-  opacity: 0.3;
+.button-open-cart:active {
+  background-color: #ffe17f;
+  color: #b39e59;
 }
 
 .button-open-cart:disabled .button-open-cart-text {
@@ -2794,13 +2781,13 @@ path:active {
 }
 
 .modal-close-button:hover {
-  color:#000000;
+  color:  #000000;
   opacity: 0.6;
   cursor: pointer;
 }
 
 .modal-close-button:active {
-  color:#000000;
+  color: #000000;
   opacity: 0.3;
   cursor: pointer;
 }
@@ -2812,7 +2799,7 @@ path:active {
 }
 
 .modal-close-button:disabled {
-  color:#000000;
+  color: #000000;
   opacity: 0.2;
   cursor: pointer;
 }
