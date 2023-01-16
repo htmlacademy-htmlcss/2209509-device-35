@@ -2030,7 +2030,7 @@ body {
   cursor: pointer;
 }
 
-/* mark */
+/* control-mark */
 .control-mark {
   position: absolute;
   left: 0;
