@@ -923,7 +923,7 @@ body {
 .tab-service-button {
   position: relative;
   min-width: 152px;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1150,7 +1150,7 @@ body {
 
 .about-us-info-header {
   margin: 0 0 15px 0;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1548,7 +1548,7 @@ body {
 
 /* адрес */
 .about-text {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
